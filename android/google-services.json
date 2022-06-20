@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "267175626212",
+    "project_id": "daily-water-count",
+    "storage_bucket": "daily-water-count.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267175626212:android:be663ab28ac70c7ff133f1",
+        "android_client_info": {
+          "package_name": "com.example.water_count_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267175626212-3q7l185e4r7vtgo18p04j7m6p97lvqgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfuNqB2rwv0fCRHC8ixmJaLpHt2_I3kG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267175626212-3q7l185e4r7vtgo18p04j7m6p97lvqgb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "267175626212-bloqors3qf4f6dhrr9r516rjfh5sg033.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.waterCountApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
