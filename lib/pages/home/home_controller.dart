@@ -4,7 +4,7 @@ class HomeController {
   CollectionReference fireBaseRef =
       FirebaseFirestore.instance.collection('waterCount');
   double percent = 20;
-  double dayGoal = 0;
+  double dailyGoal = 0;
 
   double containerHeight = 200;
 
@@ -20,7 +20,7 @@ class HomeController {
 
   Future<void> waterGet() async {
     var docGet = await fireBaseRef.doc('waterCount').get();
-    dayGoal = await docGet.get('dailyGoalInLiters');
+    dailyGoal = await docGet.get('dailyGoalInLiters');
     percent = await docGet.get('percent');
   }
 }

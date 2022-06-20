@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water_count_app/pages/home/components/daily_progress_water.dart';
 import 'package:water_count_app/pages/home/home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +22,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xff2B2C56),
       body: FutureBuilder(
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Meta diária : ${controller.dayGoal} L',
+                'Meta diária : ${controller.dailyGoal} L',
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18,
@@ -40,38 +40,9 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 5,
               ),
-              Center(
-                child: Container(
-                  width: size.width * .3,
-                  height: size.height * .4,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: const Color.fromRGBO(255, 255, 255, 0.6),
-                    ),
-                  ),
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          height: controller.containerHeight,
-                          color: const Color(0xff3B6ABA).withOpacity(.8),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          '${controller.percent}%',
-                          style: const TextStyle(
-                            fontSize: 30,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              DailyProgressWater(
+                percentText: '${controller.percent}%',
+                height: controller.containerHeight,
               ),
             ],
           );

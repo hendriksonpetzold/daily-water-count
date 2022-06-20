@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AddingWaterController {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController addWaterEC = TextEditingController();
-  final TextEditingController dayGoalEC = TextEditingController();
+  final TextEditingController dailyGoalEC = TextEditingController();
   int waterCount = 0;
   double dayGoalInLiters = 0;
   double dayGoalInMl = 0;
@@ -27,8 +27,8 @@ class AddingWaterController {
       int newValue = int.parse(addWaterEC.text);
       waterCount = waterCount + newValue;
 
-      if (dayGoalEC.text != '0' && dayGoalEC.text != '') {
-        dayGoalInMl = double.parse(dayGoalEC.text);
+      if (dailyGoalEC.text != '0' && dailyGoalEC.text != '') {
+        dayGoalInMl = double.parse(dailyGoalEC.text);
       }
       if (dayGoalInMl > 0) {
         dayGoalInLiters = dayGoalInMl / 1000;
