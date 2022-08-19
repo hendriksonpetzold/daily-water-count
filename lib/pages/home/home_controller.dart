@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class HomeController {
+import 'package:get/get.dart';
+
+class HomeController extends GetxController {
   CollectionReference fireBaseRef =
       FirebaseFirestore.instance.collection('waterCount');
   double percent = 20;
   double dailyGoal = 0;
-
   double containerHeight = 200;
 
   Future<void> initPage() async {

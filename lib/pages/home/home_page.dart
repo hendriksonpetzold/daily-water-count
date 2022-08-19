@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 import 'package:water_count_app/pages/home/components/daily_progress_water.dart';
 import 'package:water_count_app/pages/home/home_controller.dart';
 
@@ -10,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  HomeController controller = HomeController();
+  HomeController controller = Get.put(HomeController());
 
   @override
   void initState() {

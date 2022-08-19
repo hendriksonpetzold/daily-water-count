@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:validatorless/validatorless.dart';
+
 import 'package:water_count_app/pages/adding_water_page.dart/adding_water_controller.dart';
-import 'package:water_count_app/pages/components/add_button.dart';
-import 'package:water_count_app/pages/components/adding_water_form.dart';
+import 'package:water_count_app/pages/adding_water_page.dart/components/add_button.dart';
+import 'package:water_count_app/pages/adding_water_page.dart/components/adding_water_form.dart';
 
 class AddingWaterPage extends StatefulWidget {
   const AddingWaterPage({Key? key}) : super(key: key);
